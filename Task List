@@ -1,0 +1,29 @@
+List:
+Persisting ansible logs for BE pod in PROD
+Migration of Harbor from Munich to Mumbai		
+Templating BE-pipeline in Mumbai Lab	
+Creating FE-pipeline in Mumbai Lab		
+Creating Nodemon Template Pipeline in Mumbai Lab (Main)
+Setting up NodeMon env variables in deployment (Sub-Task)	
+Creating Nodemon Template Pipeline in Munich Lab	
+Create Pipeline for OauthProxy in Mumbai Lab	
+Optimise BE-pipeline in Mumbai Lab with values in seperate file	
+Applying Ingress in BE and Keycloak Pipelines of Mumbai Lab	
+Creating BE, FE pipelines with new namespace after Jenkins issue		
+Segregation of variables of pipelines and test in Mumbai Lab (Main)		
+For FE pipeline (Sub-Task)		
+For Oauth-proxy pipeline (Sub-Task)		
+For Nodemon pipeline (Sub-Task)		
+Replication of Docker File from Munich to Mumbai Lab	
+Setting Global Variables for pipelines through Jenkins in Mumbai Lab		
+BE-pipeline		
+FE-pipeline		
+Keycloak-pipeline		
+Github Repo Sync of Munich to Mumbai		
+Creating pipeline for Gitlab base-packages in Munich	
+Creating pipeline for harbor base-images in Mumbai Lab		
+Documentation of Velero Backup & Restore		
+Improvisation of Baseimage BE - Mumbai		
+Setting up Jenkins & Creating Ubuntu OS template pipeline		
+Tuning pipeline of Stack-BE	
+Unauthorised error of Dev	
