@@ -68,15 +68,3 @@ helm rollback <release-name> <revision-number>
 helm uninstall <release-name>
 •	View release information:
 helm status <release-name>
-
-Helm for custom projects:
-
-The step-by-step procedure:
-
-Step 1: Step up Helm
-            Ensure that Helm is installed on your local machine and the Kubernetes cluster.
-Prerequisites:
-1.	Kubernetes Cluster: Ensure you have a working Kubernetes cluster set up.
-2.	kubectl: Make sure you have the kubectl command-line tool installed and configured to communicate with your Kubernetes cluster.
-
- 
