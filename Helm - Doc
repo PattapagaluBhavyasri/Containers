@@ -1,0 +1,82 @@
+Helm:
+   
+A Helm chart is a package format used for packaging and managing applications on Kubernetes. It is essentially a collection of pre-configured Kubernetes resources, such as deployments, services, and ConfigMaps, packaged together for easy deployment and management. Helm is a package manager for Kubernetes that simplifies the deployment and management of applications by providing a templating system and a set of pre-built charts.
+The typical workflow for using Helm involves:
+•	Creating a Chart: Developers create Helm charts to package their applications along with the necessary Kubernetes manifests and configuration files.
+•	Packaging: Charts are packaged into a compressed archive file (.tgz) for distribution.
+•	Repository: The packaged charts can be stored in a Helm repository, either public or private, for easy access by others.
+•	Installation: Users can then use Helm to install charts onto their Kubernetes clusters. During installation, users can customize the deployment by providing values that override the defaults specified in the chart.
+•	Upgrade and Rollback: Helm supports upgrading deployed charts to newer versions and rolling back to previous versions if needed.
+
+Helm Chart:
+Below is an overview of the typical structure of a Helm chart:
+mychart/	
+|-- .helmignore	# Specifies files to be ignored when packaging the chart
+|-- Chart.yaml	# Metadata about the chart (name, version, description, etc.)
+|-- values.yaml          	# Default configuration values for the chart
+|-- charts/               	# Directory to store sub-charts (dependencies)
+|-- templates/	# Directory containing Kubernetes manifests and templates
+    |-- deployment.yaml   	# Example: Kubernetes Deployment manifest
+    |-- service.yaml      	# Example: Kubernetes Service manifest
+|-- tests/	# Directory for test-related files
+    |-- test-    connection.yaml	# Example: Helm test to verify application connectivity
+|-- .helm/	# Internal Helm directory (e.g., provenance file, metadata)
+
+This structure allows for modularity and reusability of Helm charts. The templates/ directory, in particular, is where you define the Kubernetes resources using Helm templating. Users can customize deployments by providing values in values.yaml or during the installation process. The charts/ directory is used for managing sub-charts or dependencies.
+Commands:
+•	Creating new chart:
+helm create <chart-name>
+•	Packing the chart:
+helm package <chart-directory>
+•	Installing a chart:
+helm install <release-name> <chart-name>
+•	Listing chart template:
+helm template <chart-name>
+
+Helm Repository:
+A Helm repository is a place where Helm charts are stored and can be retrieved. Helm uses repositories to organize, distribute, and share charts, which are packages of pre-configured Kubernetes resources. Helm repositories can be public or private and provide a way to centralize the distribution of charts, making it easy for users to discover and deploy applications on Kubernetes.
+Commands:
+•	Adding to a repository:
+ helm repo add <repo-name> <repo-url>
+•	Listing repository:
+helm repo list
+•	Searching for charts in repository:
+helm search repo <repo-name>
+•	Updating repository information:
+Helm repo update
+•	Removing a repository:
+helm repo remove <repo-name>
+•	Viewing repository URL:
+helm repo get-url <repo-name>
+•	Fetching information about repository:
+helm repo inspect <repo-name>
+•	Pushing chart to a repository:
+helm push mychart/ <repo-name>
+
+Helm Release:
+In Helm, a release is a specific instance of a deployed chart in a Kubernetes cluster. When you use the helm install command, you are creating a Helm release. Releases allow you to manage different versions of your application, rollback to previous versions, and keep track of the state of your deployments.
+Commands:
+•	List release:
+helm list
+•	Install a Helm chart and create a release:
+helm install <release-name> <chart-name>
+•	Upgrade the release:
+helm upgrade <release-name> <chart-name>
+•	Rollback a release:
+helm rollback <release-name> <revision-number>
+•	Delete a release:
+helm uninstall <release-name>
+•	View release information:
+helm status <release-name>
+
+Helm for custom projects:
+
+The step-by-step procedure:
+
+Step 1: Step up Helm
+            Ensure that Helm is installed on your local machine and the Kubernetes cluster.
+Prerequisites:
+1.	Kubernetes Cluster: Ensure you have a working Kubernetes cluster set up.
+2.	kubectl: Make sure you have the kubectl command-line tool installed and configured to communicate with your Kubernetes cluster.
+
+ 
